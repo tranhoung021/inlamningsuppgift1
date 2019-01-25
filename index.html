@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Lektionsdemo">
+    <title></title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="py-5 text-center">
+            <h2>Register</h2>
+        </div>
+        <form action="finish.html" id="register" novalidate name="register">
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="firstName">First name</label>
+                    <input id="firstName" type="text" class="form-control" placeholder="First name" required>
+                    <div id="firstName-invalid-feedback" class="invalid-feedback">
+                        Please enter your first name (Minimum 2 characters)
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="lastName">Last name</label>
+                    <input id="lastName" type="text" class="form-control" placeholder="Last name" required>
+                    <div id="lastName-invalid-feedback" class="invalid-feedback">
+                        Please enter your last name (Minimum 2 characters)
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="email">E-Mail</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                        </div>
+                        <input id="email" type="email" class="form-control" placeholder="E-Mail" required>
+                        <div id="email-invalid-feedback" class="invalid-feedback">
+                            Please enter a valid E-Mail
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" class="form-control" required>
+                    <div id="password-invalid-feedback" class="invalid-feedback">
+                        Please enter a password (Minimum 8 characters)
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input id="confirmPassword" data-comparewith="#password" type="password" class="form-control" required>
+                    <div id="confirmPassword-invalid-feedback" class="invalid-feedback">
+                        Password does not match
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-9 mb-3">
+                    <label for="country">Country</label>
+                    <select id="country" class="custom-select d-block w-100" required>
+                        <option value="">Choose...</option>
+                        <option value="1">China</option>
+                        <option value="2">Sweden</option>
+                        <option value="3">USA</option>
+                    </select>
+                    <div id="country-invalid-feedback" class="invalid-feedback">
+                        Please choose a country
+                    </div>
+                </div>
+            </div>
+            <div id="genders" class="d-block my-3">
+                <p class="mb-2">Gender</p>
+                <div class="custom-control custom-radio mr-3">
+                    <input id="genderMale" type="radio" name="gender" class="custom-control-input" required>
+                    <label for="genderMale" class="custom-control-label">Male</label>                    
+                </div>
+                <div class="custom-control custom-radio mr-3">
+                    <input id="genderFemale" type="radio" name="gender" class="custom-control-input" required>
+                    <label for="genderFemale" class="custom-control-label">Female</label>
+                    <div class="invalid-feedback">
+                        Please select your gender
+                    </div>
+                </div>
+            </div>
+            <div class="form-row mt-3 mb-3">
+                <label for="comment">Comment (Optional)</label>
+                <textarea class="form-control" id="comment" rows="4" maxlength="500"></textarea>
+            </div>
+
+            <div class="form-group">
+                <div class="custom-checkbox custom-control">
+                    <input id="terms" class="custom-control-input" type="checkbox" required>
+                    <label for="terms" class="custom-control-label">
+                        <p>Agree to <a href="#">terms and conditions</a></p>
+                    </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
+        </form>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
